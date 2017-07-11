@@ -1,0 +1,13 @@
+<%= form_for @seller do |form| %>
+  <%= form.label :name %>
+  <%= form.text_field :name, class: 'form-control' %>
+  <%= error_for :name, @seller.errors do |message| %>
+    <h1><%= message %></h1>
+  <% end %>
+  <br>
+  <%= form.label :rating, 'Rating' %>
+  <%= form.text_field :rating, class: 'form-control' %>
+  <%= error_for :rating, @seller.errors %>
+  <br>
+  <%= form.submit params[:action] == 'new' ? 'Save' : 'Update', class: 'btn btn-block btn-default' %>
+<% end %>

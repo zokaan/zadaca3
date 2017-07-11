@@ -1,0 +1,32 @@
+<div class="row">
+  <div class="col-md-8">
+    <h1>Products <%= link_to 'Create new', new_product_path, class: 'btn btn-primary' %></h1>
+    <%= count_for @products, 'Total' %>
+    <br>
+
+    <% unless flash[:notice].blank? %>
+      <div class="alert alert-success">
+        <p><%= flash[:notice] %></p>
+      </div>
+    <% end %>
+
+    <h3>Product details</h3>
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Price</th>
+          <th>Seller</th>
+          <th>Category</th>
+          <th>Created at</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <%= render @products %>
+      </tbody>
+    </table>
+
+  </div>
+</div>
