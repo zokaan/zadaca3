@@ -1,12 +1,12 @@
 <tr>
-  <td><%= link_to product.name, product_path(product) %></td>
+  <td><%= link_to product.name.titleize, product_path(product) %></td>
   <td><%= product.price %></td>
   <td><% if product.seller %>
-  	  <%= link_to product.seller.name, seller_path(product.seller) %>
+  	  <%= link_to product.seller.name.titleize, seller_path(product.seller) %>
   	  <% end %>
   </td>
    <td><% if product.category %>
-      <%= link_to product.category.name, category_path(product.category) %>
+      <%= link_to product.category.name.titleize, category_path(product.category) %>
       <% end %>
   </td>
   <td><%= product.created_at.strftime("%F") %></td>

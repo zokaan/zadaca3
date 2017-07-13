@@ -2,10 +2,9 @@
   <%= form.label :name %>
   <%= form.text_field :name, class: 'form-control' %>
   <%= error_for :name, @product.errors do |message| %>
-    <h1><%= message %></h1>
   <% end %>
   <br>
-  <%= form.label :price %>
+  <%= form.label :price, 'Price (use . for decimal)'  %>
   <%= form.text_field :price, class: 'form-control' %>
   <%= error_for :price, @product.errors %>
   <br>

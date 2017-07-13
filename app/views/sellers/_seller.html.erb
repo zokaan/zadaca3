@@ -1,8 +1,8 @@
 <tr>
-  <td><%= link_to seller.name, seller_path(seller) %></td>
+  <td><%= link_to seller.name.titleize, seller_path(seller) %></td>
   <td><%= seller.rating %></td>
   <td>
-    <%= link_to 'Show list od products', seller_path(seller), class: 'btn btn-sm btn-primary' %>
+    <%= link_to 'List of products', seller_path(seller), class: 'btn btn-sm btn-primary' %>
     <%= link_to 'Edit', edit_seller_path(seller), class: 'btn btn-sm btn-primary' %>
     <%= link_to 'Delete', seller_path(seller), method: :delete, data: {confirm: "Are you sure?"}, class: 'btn btn-sm btn-danger' %>
   </td>

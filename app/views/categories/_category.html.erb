@@ -1,8 +1,8 @@
 <tr>
-  <td><%= link_to category.name, category_path(category) %></td>
-  <td><%= category.description %></td>
+  <td><%= link_to category.name.titleize, category_path(category) %></td>
+  <td><%= category.description.capitalize %></td>
   <td>
-    <%= link_to 'Show list od products', category_path(category), class: 'btn btn-sm btn-primary' %>
+    <%= link_to 'List of products', category_path(category), class: 'btn btn-sm btn-primary' %>
     <%= link_to 'Edit', edit_category_path(category), class: 'btn btn-sm btn-primary' %>
     <%= link_to 'Delete', category_path(category), method: :delete, data: {confirm: "Are you sure?"}, class: 'btn btn-sm btn-danger' %>
   </td>

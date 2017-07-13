@@ -2,7 +2,6 @@
   <%= form.label :name %>
   <%= form.text_field :name, class: 'form-control' %>
   <%= error_for :name, @category.errors do |message| %>
-    <h1><%= message %></h1>
   <% end %>
   <br>
   <%= form.label :description, 'Description (optional)' %>

@@ -48,10 +48,19 @@ end
   private
 
   def seller_params
-    params.require(:seller).permit(:name, :rating, {product_attributes: [:id, :name, :price]});
+    params.require(:seller).permit(:name, :rating, {product_attributes: [:id, :name, :price, :seller_id]});
   end
 
   def find_seller
     @seller = Seller.find(params[:id])
   end
+
+  # def print_product
+  #   if @seller == product_attributes[:seller_id]
+  #     puts "Name" + @product.name
+  #     # puts "Price" + @product.price
+  #     puts "---------------------------------------------"
+  #   else
+  #     puts "nema proizvoda za ovog procavaca"
+  #   end
 end

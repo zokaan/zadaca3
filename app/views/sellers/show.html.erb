@@ -5,6 +5,15 @@
     <br>
     <p><strong>Rating:</strong></p>
     <p><%= @seller.rating %></p>
+    
     <br>
+    <h4>List of products that belongs to seller <strong><%= @seller.name %></strong>:</h4>
+    <% @seller.products.each do |product| %>
+      <% if @seller.id == product.seller_id %>
+        Name: <%= product.name %><br>
+        Price: <%= product.price %><br>
+        -------------------------------<br>
+      <% end %>
+    <% end %>
   </div>
 </div>

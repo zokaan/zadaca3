@@ -48,7 +48,7 @@ end
   private
 
   def category_params
-    params.require(:category).permit(:name, :description, {product_attributes: [:id, :name, :price]});
+    params.require(:category).permit(:name, :description, {product_attributes: [:id, :name, :price, :category_id]});
   end
 
   def find_category

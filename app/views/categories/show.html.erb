@@ -3,8 +3,17 @@
     <p><strong>Name:</strong></p>
     <p><%= @category.name %></p>
     <br>
-    <p><strong>Rating:</strong></p>
+    <p><strong>Description:</strong></p>
     <p><%= @category.description %></p>
     <br>
+
+    <h4>List of products that belongs to category <strong><%= @category.name %></strong>:</h4>
+    <% @category.products.each do |product| %>
+      <% if @category.id == product.category_id %>
+        Name: <%= product.name %><br>
+        Price: <%= product.price %><br>
+        -------------------------------<br>
+      <% end %>
+    <% end %>
   </div>
 </div>
